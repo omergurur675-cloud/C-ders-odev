@@ -1,34 +1,40 @@
 /*
-SORU 8 : Bir kullanıcının bankada kredi almasını sağlayacak şartlar soruluyor yaş ve gelir hakkında bilgi alınarak 
-kredi alabilir veya kredi alamaz şeklinde yazan bir algoritma tasarlayınız:
+SORU 8 : Kulanıcıdan 10 sayısı alana kadar sürekli sayı giren o sayının çiftlerini toplayan bir algoritma tasarlayınız:
 
-SORU ALGORİTMASI:
+SORU ALGORITMASI:
 1. başla
-2. gelir, yaş
-3. do
-    if (gelir<2000 || yas<18)
-    yaz "Kredi şartları sağlanmadı. Tekrar deneyin."
-4. while(gelir<2000 || yas<18)
-    yaz "Kredi onaylandı!"
+2. n, toplam
+3.while(1)
+    if(n == 0 ) break
+    if( n % 2 = 0)
+      toplam += n
+4. yaz "toplam"
 5. bitir
 
 */
+ 
+#include<stdio.h>
 
-#include <stdio.h>
+  int main() {
 
-int main() {
-    int gelir, yas;
-    do {
-        printf("Gelirinizi girin: ");
-        scanf("%d",&gelir);
-        printf("Yaşınızı girin: ");
-        scanf("%d",&yas);
+    int n, toplam = 0;
+    
 
-        if(gelir<2000 || yas<18)
-            printf("Kredi şartları sağlanmadı. Tekrar deneyin.\n");
-    } while(gelir<2000 || yas<18);
+    printf("MERHABA HOŞ GELDİNİZ!\n");
 
-    printf("Kredi onaylandı!\n");
+    while (1) {
+        printf("Lütfen bir sayı giriniz:");
+        scanf("%d", &n );
+        if ( n == 0 ) {
+            break;
+        }
+        else if( n % 2 == 0){
+            toplam += n;
+        }
 
-     return 0;
+    }
+    
+     printf("toplam:%d", toplam);
+
+      return 0;
 }

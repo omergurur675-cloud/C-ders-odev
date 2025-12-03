@@ -1,53 +1,47 @@
 /*
-SORU 9 : 2 aşamalı bir güvenlik sorusu vardır. Birisi PİN kodu ile diğeri ONAY harfi ile bunları doğrulayarak yazan bir algoritma yazınız:
+SORU 9 : Kullanıcı tarafından girilen bir sayının asal olup olmadıgını yazan bir algoritma tasarlayınız:
 
 SORU ALGORİTMASI:
-1. başla
-2. pin, doğru_pin, onay
-3. doğru_pin = 4444
-4. do 
-    yaz ("Bir pin kodu giriniz ( 4 haneli olacak şekilde ):
-    if ( pin != doğru_pin )
-    yaz ("Hatalı pin.)
-5.  while( pin != doğru_pin )
-6. do 
-     yaz (" onaylamak için ( 'A' ) yazın:")
-    if( onay != 'A') 
-    yaz ("Hatalı harf.\n")
-7. while( onay !='A' )
-    yaz ("TEBRİKLER! Güvenikten geçtiniz.)
-8. bitir
+1 - Başla
 
+2 - Kullanıcıdan bir sayı al = n
+
+3 - i = 2 yap
+4 - asal = 1 yap   (1 = asal varsay, 0 = asal değil)
+
+5 - i < n olduğu sürece döngüye gir:
+        Eğer n mod i == 0 ise:
+            asal = 0 yap
+            döngüyü kır  (çık)
+        i'yi 1 arttır
+
+6 - Eğer asal == 1 ise:
+        "Sayı asaldır" yaz
+    değilse:
+        "Sayı asal değildir" yaz
+
+7 - Bitir
+ 
 */
 
 
-#include<stdio.h>
+#include <stdio.h>
 
-  int main() {
+int main() {
+    int n, i = 2, asal = 1;
+    printf("Sayi giriniz: ");
+    scanf("%d", &n);
 
-    int pin, doğru_pin = 4444;
-    char onay;
-
-    do {
-        printf("Bir pin kodu giriniz ( 4 haneli olacak şekilde ):");
-        scanf("%d", &pin);
-
-        if ( pin != doğru_pin ) {
-            printf("Hatalı pin.\n");
+    while (i < n) {
+        if (n % i == 0) {
+            asal = 0;
+            break;
         }
-    } while( pin != doğru_pin );
+        i++;
+    }
 
+    if (asal == 1) printf("Asal");
+    else printf("Asal degil");
 
-    do {
-        printf(" onaylamak için ( 'A' ) yazın:");
-        scanf("%c", &onay);
-
-        if( onay != 'A') {
-            printf("Hatalı harf.\n");
-        }
-    } while( onay !='A' );
-    
-           printf("TEBRİKLER! Güvenikten geçtiniz.\n");
-
-         return 0;
-  }
+    return 0;
+}

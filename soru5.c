@@ -1,48 +1,37 @@
 /*
-SORU 5 : Bir kullanıcı bankadar para çekmek istiyor bakiyesine göre işlemler yapılıyor:
+SORU 6 : Kullanıcı tarafından girilen bir sayıyın rakamlarını toplayan bir algpritma tasarlayınız.
+
 
 SORU ALGORİTMASI:
 1. başla
-2. bakiye, cekilen
-3. bakiye = 5000
-4. do
-    yaz " çekilecek tuturı giriniz"
-    if ( cekilen <= bakiye)
-      yaz "para çekildi kalan bakiyeniz:"
-    else 
-      yaz "yetersiz bakiye"
-5. while ( bakiye > 0 )   
-      yaz"hesapta para kalmadı"
+2. n, toplam
+3. toplam = 0
+4. while ( n > 0)
+   toplam += n % 10
+   n /= 10
+5. yaz toplam
 6. bitir
 
 */
 
 
-#include<stdio.h>
 
-  int main() {
 
-    int bakiye = 5000, cekilen;
 
-    do {
-        printf("çekilecek tutarı giriniz:");
-        scanf("%d", &cekilen);
 
-        if ( cekilen <= bakiye ) {
-            bakiye -= cekilen;
-            printf("Para çekildi kalan bakiyeniz %d\n", bakiye, cekilen);
-            
-        }
 
-       else {
-           printf("YETERSİZ BAKİYE!\n");
-       }
+
+
+#include <stdio.h>
+int main() {
+    int n, toplam=0;
+
+    printf("bir sayı giriniz:");
+    scanf("%d",&n);
+    while(n > 0) {
+        toplam += n % 10;
+        n /= 10;
     }
-       while ( bakiye > 0 );
-        
-       
-        printf("HESAPTA PARA KALMADI!\n");
-
-         return 0;
- 
+    printf("Rakamlar Toplami: %d\n", toplam);
+    return 0;
 }

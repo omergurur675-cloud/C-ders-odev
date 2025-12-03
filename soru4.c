@@ -1,46 +1,37 @@
 /*
-soru 4 : Bir kullanıcı mağazadaki alışverişini bütçesini aşma durumunu kontrol eden bir algoritma tasarlayınız:
+SORU 4 : Gizli olan bir sayıyı tahmin etme ile doğru yanıtı bulmaya çalışan bir algoritma tasarlayınız:
 
 SORU ALGORİTMASI:
-1. başla
-2. bütçe, toplam
-3. toplam = 0
-3. do
-    oku fiyat
-    if ( toplam + fiyatı <= bütçe)
-        toplam = toplam + fiyat
-        yaz "ürün alındı, toplam:"
-        else 
-        yaz "ürün bütçeyi aşıyor. başka ürün seçin"
-4.    while ( toplam < bütçe )
-        yaz " bütçe doldu toplam harcama:"
-5. bitir
+"1. başla
+2. tahmin , gizli 
+3. gizli = 23 ,
+4. while ( tahmin != gizli)
+5. yaz " doğru bildin!
+6. bitir
 
 */
 
-#include<stdio.h>
+#include <stdio.h>
 
-  int main() {
-     
-    int bütçe, fiyat, toplam = 0;
+int main() {
+    int gizli = 23;
+    int tahmin = 0;
 
-    printf("Bütçenizi giriniz:");
-    scanf("%d", &bütçe);
+    printf("Sayi tahmin oyununa hosgeldin!\n");
+    printf("1 ile 50 arasinda bir sayi tutdum. Tahmin et bakalim!\n");
 
-    do {
-       printf("alacağınız ürünün fiyatini giriniz:");
-       scanf("%d", &fiyat);
-       
-        if ( toplam + fiyat <= bütçe) {
-        toplam += fiyat;
-        printf("Ürün alındı.\nToplam:%d\n", toplam);
-        }  
-        else {
-        printf("Ürün alınamadı bütçeyi aşıyor başka bir ürün alın.\n");
+    while(tahmin != gizli) {
+        printf("Tahminin: ");
+        scanf("%d", &tahmin);
+
+        if(tahmin < gizli) {
+            printf("Daha buyuk bir sayi soyle :)\n");
+        } else if(tahmin > gizli) {
+            printf("Daha kucuk bir sayi soyle :)\n");
         }
-    
-    }    while ( toplam < bütçe );
-       printf("Bütçe doldu! Toplam harcama: %d\n", toplam);
+    }
 
-       return 0;
+    printf("TEBRIKLER! Dogru bildin! Gizli sayi %d idi.\n", gizli);
+
+    return 0;
 }

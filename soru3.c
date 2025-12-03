@@ -1,32 +1,29 @@
 /*
-SORU 3 : Kullanıcı şifreyi doğru girene kadar deneme yaptıran bir algoritma tasarlayınız.
+SORU 3 : Girilen sayının faktoriyelini bulan bir algoritma tasarlayınız:
 
-SORU ALGORİTMASI:
+SORU ALGORİTASI:
 1. başla
-2. n, şifre
-3. do
-   yaz " şifreyi giriniz"
-4. while ( şifre != 1234 )
-   yaz "tekrar deneyiniz"
-5. bitir
+2. int n, f = 1
+3. while ( n > 0 )
+4. f *= n
+5. n--
+6. bitir
 
 */
 
-#include<stdio.h>
+#include <stdio.h>
 
-  int main() {
+ int main() {
+    int n, f = 1;
+    printf("lütfen bir sayı giriniz:");
+    scanf("%d", &n);
 
-    int n, şifre;
-
-    do {
-        printf("Bir şifre denemesinde bulununuz:");
-        scanf("%d", &şifre);
-
-    }while( şifre != 1234 );
-        printf("giriş başarılı");
-     
-        return 0;   
+    while( n > 0 ) {
     
-}
-
-  
+        f *= n;
+        n--;
+    }
+    printf("faktoriyel = %d", f);
+      return 0;
+    
+ }

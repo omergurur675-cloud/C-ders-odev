@@ -1,42 +1,43 @@
 /*
-SORU 6 : Bir oyuncu canı 0 olana kadar oyuna devam eden ve bunu yazan bir algoritma tasarlayınız:
+SORU 7 : Gizli bir şifreyi kullanıcı sayı tahmin ederek o şifreyi 3 hak ile bulmaya çalışanve  yazabilen bir algoritma tasarlayınız.
 
 SORU ALGORİTMASI:
-1.başla
-2.can, hasar
-3. can = 100, hasar = 0
-4. do 
-    yaz "hasarımızı giriniz:"
-    if ( can > 0 )
-    yaz "canınız:"
-    else
-    yaz " oyun bitti:"
-5. while ( can > 0 )
-6. bitir
-
+1. başla
+2. tahmin, gizli_ş, hak
+3. gizli_ş = 1234, hak = 3
+4. while ( tahmin != gizli_ş )
+    yaz "şifre yanlış tekrar deneyiniz tahmin hakkınız 2 kaldı!"
+    hak--
+    yaz ""
 */
 
 
-#include<stdio.h>
 
- int main() {
+#include <stdio.h>
 
-    int can = 100, hasar = 0;
+int main() {
+    int gizli_sifre = 1234;  
+    int tahmin;
+    int hak = 3;           
+    int sayac = 0;
 
-    do {
-        printf("Alacağın hasarı giriniz:");
-        scanf("%d", &hasar );
-        can -= hasar;
+    printf("Sayi tahmin oyununa hosgeldiniz! 3 hak ile gizli sayiyi bulun.\n");
 
-        if ( can > 0 ) {
-        printf("Canınız: %d\n", can);
-        }
+    while(sayac < hak) {
+        printf("Tahmininizi giriniz: ");
+        scanf("%d", &tahmin);
 
-        else {
-        printf("Oyun bitti!\n");
+        if(tahmin == gizli_sifre) {
+            printf("Tebrikler! Sifreyi dogru bildiniz.\n");
+            break;
+        } else {
+            sayac++;
+            if(sayac < hak)
+                printf("Yanlis! Kalan hak: %d\n", hak - sayac);
+            else
+                printf("Hakkiniz bitti. Gizli sifre: %d\n", gizli_sifre);
         }
     }
-    while( can > 0 );
 
-     return 0;
- }
+    return 0;
+}
