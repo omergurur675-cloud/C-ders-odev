@@ -1,29 +1,37 @@
 /*
-SORU 3 : Girilen sayının faktoriyelini bulan bir algoritma tasarlayınız:
+SORU 4 : Bir kullanıcının restorantta belli numaralardan spariş vererek yemeğini yemektedir. Bunu ekrana yazan bir algoritma tasarlayınız.
 
-SORU ALGORİTASI:
+SORU ALGORİTMASI:
 1. başla
-2. int n, f = 1
-3. while ( n > 0 )
-4. f *= n
-5. n--
+2. menü
+3. switch(menü)
+4. 1-döner, 2-hatay soslu dürüm, 3-iskender
+5. ekrana yazdır
 6. bitir
+
 
 */
 
-#include <stdio.h>
 
- int main() {
-    int n, f = 1;
-    printf("lütfen bir sayı giriniz:");
-    scanf("%d", &n);
+#include<stdio.h>
 
-    while( n > 0 ) {
-    
-        f *= n;
-        n--;
-    }
-    printf("faktoriyel = %d", f);
-      return 0;
-    
- }
+  int main() {
+int menü;
+  printf("Menü numarasını giriniz:\n1 - Hatay soslu dürüm\n2 - Tavuk pilav\n3 - İskender\n\n");
+  scanf("%d", &menü);
+
+  switch(menü) {
+
+    case 1 : printf("Hatay soslu dürüm spariş edildi. Afiyet olsun"); break;
+
+    case 2 : printf("Tavuk pilav spariş edildi. Afiyet olsun"); break;
+
+    case 3 : printf("İskender spariş edildi. Afiyet olsun"); break;
+   
+    default : printf("Geçersiz menü numarası\nLütfen (1 - 2 - 3) numaradan birini seçip sparişinizi verebilirsiniz\nAfiyet olsun");
+  
+  }
+
+   return 0;
+   
+}

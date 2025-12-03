@@ -1,37 +1,36 @@
 /*
-SORU 6 : Kullanıcı tarafından girilen bir sayıyın rakamlarını toplayan bir algpritma tasarlayınız.
-
+SORU 5 : Bir kullanıcının arabasındaki bazı işlemleri aktive etmek ister ve bu adımları ekrana yazan bir akgoritma tasarlayınız.
 
 SORU ALGORİTMASI:
-1. başla
-2. n, toplam
-3. toplam = 0
-4. while ( n > 0)
-   toplam += n % 10
-   n /= 10
-5. yaz toplam
-6. bitir
+1.başla
+2. mod
+3. yaz "1-soğutma, 2-ısıtma"
+4. switch (mod)
+      case 1 = soğutma
+      case 2 = isıtma
+      default = geçersiz işlem
+5.bitir
+
 
 */
 
 
+#include<stdio.h>
 
+  int main() {
 
+    int mod;
 
+    printf("Birini seçin:\n1 : soğutma\n2 : ısıtma\n");
+    scanf("%d", &mod);
 
+    switch(mod) {
 
+         case 1 : printf("Soğutma özelliği aktive oluyor"); break;
 
+         case 2 : printf("Isıtma özelliği aktive oluyor"); break;
 
-#include <stdio.h>
-int main() {
-    int n, toplam=0;
-
-    printf("bir sayı giriniz:");
-    scanf("%d",&n);
-    while(n > 0) {
-        toplam += n % 10;
-        n /= 10;
+         default : printf("Geçersiz mod");
     }
-    printf("Rakamlar Toplami: %d\n", toplam);
-    return 0;
+     return 0;
 }

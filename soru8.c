@@ -1,40 +1,48 @@
 /*
-SORU 8 : Kulanıcıdan 10 sayısı alana kadar sürekli sayı giren o sayının çiftlerini toplayan bir algoritma tasarlayınız:
+SORU 6 : Bir kullanıcı verilen numaralarla şeçim ve bunu ekrana girer bunun algoritmasını tasarlaınız.
 
-SORU ALGORITMASI:
-1. başla
-2. n, toplam
-3.while(1)
-    if(n == 0 ) break
-    if( n % 2 = 0)
-      toplam += n
-4. yaz "toplam"
-5. bitir
+SORU ALGORİTMASI:
+1. Başla
+2. ı
+3. Kullanıcıya bölümleri göster:
+   1 - salon
+   2 - mutfak
+   3 - çocuk odası
+
+4. switch (ı)
+   case = 1:
+       "Salonnun ışığı açıldı."
+   case = 2:
+       "Mutfağın ışığı açıldı."
+   case = 3:
+       "Çocuk odsının ışığı açıldı."
+   default:
+       "Geçersiz işlem."
+
+5. Bitir
+
 
 */
- 
+
 #include<stdio.h>
 
   int main() {
+int ı;
+  printf("Hangi odanın ışığını açmak istiyorsunuz:\n1 - Salon\n2 - Mutfak\n3 - Çocuk odası\n");
+  scanf("%d", &ı);
 
-    int n, toplam = 0;
-    
+  switch(ı) {
 
-    printf("MERHABA HOŞ GELDİNİZ!\n");
+    case 1 : printf("Salonnun ışığı açıldı."); break;
 
-    while (1) {
-        printf("Lütfen bir sayı giriniz:");
-        scanf("%d", &n );
-        if ( n == 0 ) {
-            break;
-        }
-        else if( n % 2 == 0){
-            toplam += n;
-        }
+    case 2 : printf("Mutfağın ışığı açıldı."); break;
 
-    }
-    
-     printf("toplam:%d", toplam);
+    case 3 : printf("Çocuk odsının ışığı açıldı."); break;
+   
+    default : printf("Geçersiz işlem ");
+  
+  }
 
-      return 0;
+   return 0;
+   
 }

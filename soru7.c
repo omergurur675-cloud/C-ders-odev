@@ -1,43 +1,48 @@
 /*
-SORU 7 : Kullanıcı istediği sayıları girebilir 0 girirse döngü biter tüm tahminleri ekrana yazdıran bir algoritma tasarlayınız
+SORU 6 : Bir kullanıcı verilen numaralarla seçim yapar ve bunu ekrana girer bunun algoritmasını tasarlaınız.
 
 SORU ALGORİTMASI:
-1. başla
-2. toplam  = 0
-3. whlle ( true )
-    if ( tahmin == 0 )
-    break
-    toplam += tahmin
-4. yazdır "toplam puan" , toplam
-5. bitir
-    
+1. Başla
+2. K
+3. Kullanıcıya bölumlere girer:
+   1 - kitap ekle
+   2 - kitap sil
+   3 - kitap ara
+
+4. switch (k)
+   case = 1:
+       "kitap eklendi."
+   case = 2:
+       "kitap silindi."
+   case = 3:
+       "kitap aranıyor..."
+   default:
+       "Geçersiz işlem."
+
+5. Bitir
+
 */
 
 
 #include<stdio.h>
 
   int main() {
-    
-     int tahmin;
-     int toplam = 0;
+int k;
+  printf("İşlem numarasını giriniz:\n1 - Kitap ekle\n2 - Kitap sil\n3 - Kitap ara\n");
+  scanf("%d", &k);
 
+  switch(k) {
 
-    printf("Merhaba hoş geldin\n");
+    case 1 : printf("Kitap eklendi."); break;
 
-    while(1){
-        printf("Bir tahminde bulunuz:\n");
-        scanf("%d", &tahmin);
+    case 2 : printf("Kitap silindi."); break;
 
-        if(tahmin == 0 ){
-        break;
-        }
-        toplam += tahmin;
+    case 3 : printf("Kitap araniyor..."); break;
+   
+    default : printf("Geçersiz işlem ");
+  
+  }
 
-    }
-    printf("Toplam puan %d\n", toplam);
-
-      return 0;
- 
-
+   return 0;
+   
 }
-

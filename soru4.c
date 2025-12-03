@@ -1,37 +1,35 @@
 /*
-SORU 4 : Gizli olan bir sayıyı tahmin etme ile doğru yanıtı bulmaya çalışan bir algoritma tasarlayınız:
+SORU 4 : Bir müşteri telefon hattındaki o numaradaki işlemleri kullanabilen ve ekrana yazan bir algoritma tasarlayınız.
 
 SORU ALGORİTMASI:
-"1. başla
-2. tahmin , gizli 
-3. gizli = 23 ,
-4. while ( tahmin != gizli)
-5. yaz " doğru bildin!
-6. bitir
+1 başla
+2. n
+3. switch(n) "1-müşteri hizmetleri, 2-faturta işlemleri, 3-teknik servis"
+4. ekrana ver
+5. bitir
 
 */
 
-#include <stdio.h>
 
-int main() {
-    int gizli = 23;
-    int tahmin = 0;
+#include<stdio.h>
 
-    printf("Sayi tahmin oyununa hosgeldin!\n");
-    printf("1 ile 50 arasinda bir sayi tutdum. Tahmin et bakalim!\n");
+  int main() {
 
-    while(tahmin != gizli) {
-        printf("Tahminin: ");
-        scanf("%d", &tahmin);
+    int n;
 
-        if(tahmin < gizli) {
-            printf("Daha buyuk bir sayi soyle :)\n");
-        } else if(tahmin > gizli) {
-            printf("Daha kucuk bir sayi soyle :)\n");
-        }
+    printf("--İŞLEMLER--\n1 : müşteri hizmetleri\n2 : Fatura işlemleri\n3 : Teknik servis\n\n");
+    scanf("%d", &n);
+
+    switch(n) {
+
+        case 1 : printf("Müşteri hizmetlerine bağlanıyorsunuz."); break;
+
+        case 2 : printf("Fatura işlemlerine yönlendiriliyorsunuz"); break;
+
+        case 3 : printf("Teknik servise yönlendiriliyorsunuz"); break;
+
+        default : printf("Geçersiz tuş (1-2-3) tuşlarından birisine basınız");
     }
-
-    printf("TEBRIKLER! Dogru bildin! Gizli sayi %d idi.\n", gizli);
-
-    return 0;
-}
+     
+      return 0;
+  }
