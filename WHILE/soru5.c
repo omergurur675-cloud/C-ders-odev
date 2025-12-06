@@ -12,14 +12,8 @@ SORU ALGORİTMASI:
 5. yaz toplam
 6. bitir
 
+
 */
-
-
-
-
-
-
-
 
 
 #include <stdio.h>
