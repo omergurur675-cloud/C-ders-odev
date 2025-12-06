@@ -1,4 +1,4 @@
-*/
+/*
 SORU 5 : Bu program, 0’dan 50’ye kadar olan sayılardan 7’nin katı olmayanları ekrana yazdırır ve en sonda i’nin son değerini gösterir.
 
 SORU ALGORİTMASI:
