@@ -1,3 +1,17 @@
+/*
+SORU 7 : Bu program, kullanıcıdan 10 kez sayı alır ve sadece tek olan sayıları ekrana yazdırır.
+
+SORU ALGORİTMASI:
+1- Başla
+2- i = 0
+3- 10 kere tekrar et
+4-     Kullanıcıdan sayı s al
+5-     Eğer s çift ise devam et (atla)
+6-     Değilse s değerini "tek sayı" olarak yazdır
+7- Bitir
+
+*/
+
 #include<stdio.h>
 
   int main() {
