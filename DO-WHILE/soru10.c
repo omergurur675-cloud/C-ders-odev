@@ -1,10 +1,11 @@
-/*Kart şifresi doğru mu kontrol edilecek.
+/*
+SORU 10 : Kart şifresi doğru mu kontrol edilecek.
 
-3 yanlışta kart bloke olacak.
+          3 yanlışta kart bloke olacak.
 
-Doğru girilirse menü açılacak (bakiye görüntüle, para çek, para yatır).
+          Doğru girilirse menü açılacak (bakiye görüntüle, para çek, para yatır).
 
-Kullanıcı “0” tuşlayınca sistem kapanacak.
+          Kullanıcı “0” tuşlayınca sistem kapanacak.
 
 SORU ALGORİTMASI:
 1. Başla
