@@ -1,5 +1,6 @@
 /*
 SORU 1 : Bu program, 1’den 20’ye kadar olan sayılar içinden sadece tek sayıların toplamını hesaplar
+
 SORU ALGORİTMASI:
 1- Başla
 2- toplam = 0
