@@ -1,5 +1,5 @@
 /*
-SORU 6 : Bir kullanıcı verilen numaralarla seçim yapar ve bunu ekrana girer bunun algoritmasını tasarlaınız.
+SORU 7 : Bir kullanıcı verilen numaralarla seçim yapar ve bunu ekrana girer bunun algoritmasını tasarlaınız.
 
 SORU ALGORİTMASI:
 1. Başla
