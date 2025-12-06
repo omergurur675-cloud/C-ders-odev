@@ -1,5 +1,5 @@
 /*
-SORU 6 : Kullanıcı tarafından girilen bir sayıyın rakamlarını toplayan bir algpritma tasarlayınız.
+SORU 5 : Kullanıcı tarafından girilen bir sayıyın rakamlarını toplayan bir algpritma tasarlayınız.
 
 
 SORU ALGORİTMASI:
