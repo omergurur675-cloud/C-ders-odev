@@ -1,5 +1,5 @@
 /*
-SORU 4 : Bir kullanıcının restorantta belli numaralardan spariş vererek yemeğini yemektedir. Bunu ekrana yazan bir algoritma tasarlayınız.
+SORU 3 : Bir kullanıcının restorantta belli numaralardan spariş vererek yemeğini yemektedir. Bunu ekrana yazan bir algoritma tasarlayınız.
 
 SORU ALGORİTMASI:
 1. başla
