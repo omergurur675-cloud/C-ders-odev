@@ -8,10 +8,10 @@ SORU ALGORİTMASI:
 4. while ( tahmin != gizli_ş )
     yaz "şifre yanlış tekrar deneyiniz tahmin hakkınız 2 kaldı!"
     hak--
-    yaz ""
+    yaz 
+5. bitir
+
 */
-
-
 
 #include <stdio.h>
 
