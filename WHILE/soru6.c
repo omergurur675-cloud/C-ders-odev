@@ -1,5 +1,5 @@
 /*
-SORU 7 : Gizli bir şifreyi kullanıcı sayı tahmin ederek o şifreyi 3 hak ile bulmaya çalışanve  yazabilen bir algoritma tasarlayınız.
+SORU 6 : Gizli bir şifreyi kullanıcı sayı tahmin ederek o şifreyi 3 hak ile bulmaya çalışanve  yazabilen bir algoritma tasarlayınız.
 
 SORU ALGORİTMASI:
 1. başla
